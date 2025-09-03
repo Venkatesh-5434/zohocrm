@@ -1,0 +1,140 @@
+/* style.css */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 15px;
+  margin: 0;
+}
+
+.zoho-grand-form {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  animation: zoomFadeIn 1s ease;
+  color: #fff;
+}
+
+@keyframes zoomFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.grand-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.grand-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.grand-header .material-icons {
+  font-size: 48px;
+  color: gold;
+}
+
+.grand-form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.grand-form-group input {
+  width: 100%;
+  padding: 14px 10px 10px 10px;
+  font-size: 15px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.grand-form-group input:focus {
+  border-bottom-color: #00f0ff;
+  outline: none;
+}
+
+.grand-form-group label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.grand-form-group input:focus + label,
+.grand-form-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 5px;
+  font-size: 12px;
+  color: #00f0ff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.grand-buttons {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.grand-buttons button {
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.grand-submit {
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  color: #000;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.grand-submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.grand-reset {
+  background: #333;
+  color: #ccc;
+  border: 1px solid #777;
+}
+
+.grand-reset:hover {
+  background: #444;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .zoho-grand-form {
+    padding: 30px 20px;
+  }
+
+  .grand-buttons button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
